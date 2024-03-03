@@ -1,0 +1,33 @@
+{
+  "name": "live_broadcast",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "serve": "concurrently \"npm run dev\" \"npm run tail\"",
+    "dev": "vite",
+    "tail": "tailwindcss -i ./src/style/tailwind.css -o ./src/style/style.css --watch",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "preinstall": "node ./scripts/preinstall.js"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.5.6",
+    "reset.css": "^2.0.2",
+    "sass": "^1.71.1",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue-tsc": "^1.8.27"
+  }
+}
